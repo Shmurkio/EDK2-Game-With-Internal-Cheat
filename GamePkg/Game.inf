@@ -1,0 +1,34 @@
+[Defines]
+    INF_VERSION = 0x00010005
+    BASE_NAME = Game
+    FILE_GUID = 1D6AAE72-D7FB-473B-8E4E-3A1D7B7C2E30
+    MODULE_TYPE = UEFI_APPLICATION
+    VERSION_STRING = 1.0
+    ENTRY_POINT = ShellCEntryLib
+
+[Sources]
+    Main.cpp
+    Game.hpp
+    LibCpp/defs.hpp
+    LibCpp/vector.hpp
+    LibCpp/new.hpp
+    LibCpp/stdexcept.hpp
+
+[Packages]
+    MdePkg/MdePkg.dec
+    ShellPkg/ShellPkg.dec
+    StdLib/StdLib.dec
+
+[LibraryClasses]
+    UefiLib
+    ShellCEntryLib
+    BaseLib
+    BaseMemoryLib
+    MemoryAllocationLib
+    LibStdLib
+    LibStdio
+    LibString
+    DevConsole
+
+[Protocols]
+    gEfiSimpleTextInputExProtocolGuid
