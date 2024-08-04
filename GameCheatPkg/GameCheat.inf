@@ -1,0 +1,23 @@
+[Defines]
+    INF_VERSION = 0x00010005
+    BASE_NAME = GameCheat
+    FILE_GUID = 357586F5-BCA9-4050-8F12-2042FE89819F
+    MODULE_TYPE = UEFI_DRIVER
+    VERSION_STRING = 1.0
+    ENTRY_POINT = UefiMain
+
+[Sources]
+    Main.cpp
+    GameCheat.hpp
+    LibCpp/defs.hpp
+    LibCpp/mem.hpp
+
+[Packages]
+    MdePkg/MdePkg.dec
+
+[LibraryClasses]
+    UefiLib
+    UefiDriverEntryPoint
+    UefiBootServicesTableLib
+    UefiRuntimeServicesTableLib
+    BaseMemoryLib
